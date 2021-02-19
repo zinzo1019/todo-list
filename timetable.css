@@ -1,0 +1,117 @@
+/* class로 설정하면 우선순위가 밀리기 때문에 id로 설정 */
+#biggestTable {
+    position: relative;
+    top: 10px;
+    left: 50%;
+    width: 500px;
+    height: 690px;
+    margin-left: -250px;
+    border: 10px solid #9098B2;
+    /* background-color: #e7eef344; */
+}
+.center {
+    border: 2px solid black;
+    position: absolute;
+    width: 400px;
+    top: 15px;
+    left: 50%;
+    margin-left: -215px;
+    background-color: whitesmoke;
+}
+.color {
+    background-color: whitesmoke;
+}
+ul li {
+    margin-bottom: 8px;
+}
+label {
+    font-family: 'Yusei Magic', sans-serif;
+    width: 90px;
+    float: left;
+}
+p {
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    margin-top: 2px;
+    text-align: center;
+}
+option {
+    font-family: 'Yusei Magic', sans-serif;
+}
+button {
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+    float: right;
+    width: 50px;
+    height: 30px;
+}
+table.timetable {
+    font-family: 'Yusei Magic', sans-serif;  
+    font-weight: bold;  
+    font-size: 15px;
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    margin-left: -225px;
+    /* 글자를 추가해도 테이블 크기는 일정 */
+    table-layout: fixed;
+    /* 빈 셀도 표시가 되도록 */
+    empty-cells: show;
+    /* <td>끼리의 여백 없애기 (테두리) */
+    /* 셀 테두리를 둥글게 할 때는 이 효과가 필요함 */
+    /* border-collapse: collapse; */
+    width: 450px;
+}
+thead {
+    background: #eee;
+}
+th, td {
+    text-align: center;
+    border:1px solid black;
+    /* 한 칸의 높이 설정 */                                                                                                                           
+    padding: 7.5px;
+    font-size: 0.8em;
+    /* 셀 테두리 둥글게 */
+    border-radius: 10px;
+}
+th {
+    background-color: #DADDE7;
+}
+td {
+    font-size: 0.5em;
+    padding: 0px;
+}
+caption {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+#buttons {
+    position: relative;
+
+}
+.delete {
+    position: absolute;
+    left: 360px;
+    top: 645px;
+}
+.done {
+    position: absolute;
+    left: 420px;
+    top: 645px;
+}
+.roundButton {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: rgb(255, 105, 105);
+    /* line-height와 font-size를 함께 설정하면 글씨가 아래로 밀리지 않는다. */
+    /* font-size: 3px;
+    line-height: 0px; */
+    float: left;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    /* margin을 0으로 설정하지 않으면 버튼 옆에 빈 공간이 생긴다. */
+    margin: 0px;
+}

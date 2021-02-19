@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="timetable.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <!-- 폰트 추가 -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Yusei+Magic&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="biggestTable">
+            <!-- biggestTable의 background-color을 설정하면 'create Timetable'이 사라져버림 따라서 'create
+            Timetable'을 table로 또 감싸줘야 함 -->
+            <table>
+                <fieldset class="center">
+                    <p>Create Timetable</p>
+                    <ul>
+                        <li>
+                            <label for="subject">subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                autocomplete="off"
+                                \="\"
+                                autofocus="autofocus"
+                                required="required"
+                                placeholder="자바스크립트 활용"
+                                onkeyup="enterkey();">
+                        </li>
+                        <li>
+                            <label for="day">day</label>
+                            <select id="day">
+                                <option value="mon">Monday</option>
+                                <option value="tue">Tuesday</option>
+                                <option value="wed">Wednesday</option>
+                                <option value="thu">Thursday</option>
+                                <option value="fri">Friday</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="timeStart">start time</label>
+                            <select id="timeStart" class="timesize">
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="time">hours</label>
+                            <select id="time">
+                                // option에서 value값을 지정해야 값을 가져올 수 있다
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <button id="enrollment">add</button>
+                        </li>
+                    </ul>
+                </fieldset>
+            </table>
+            <div id="divTable">
+            <table class="timetable color">
+                <caption>timetable</caption>
+                <thead class="border">
+                    <tr>
+                        <th width="30px" style="background-color: #9098B2;"></th>
+                        <th>mon</th>
+                        <th>tue</th>
+                        <th>wed</th>
+                        <th>thu</th>
+                        <th>fri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>9</th>
+                        <td id="mon9"></td>
+                        <td id="tue9"></td>
+                        <td id="wed9"></td>
+                        <td id="thu9"></td>
+                        <td id="fri9"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>10</th>
+                        <td id="mon10"></td>
+                        <td id="tue10"></td>
+                        <td id="wed10"></td>
+                        <td id="thu10"></td>
+                        <td id="fri10"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>11</th>
+                        <td id="mon11"></td>
+                        <td id="tue11"></td>
+                        <td id="wed11"></td>
+                        <td id="thu11"></td>
+                        <td id="fri11"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>12</th>
+                        <td id="mon12"></td>
+                        <td id="tue12"></td>
+                        <td id="wed12"></td>
+                        <td id="thu12"></td>
+                        <td id="fri12"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td id="mon13"></td>
+                        <td id="tue13"></td>
+                        <td id="wed13"></td>
+                        <td id="thu13"></td>
+                        <td id="fri13"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>2</th>
+                        <td id="mon14"></td>
+                        <td id="tue14"></td>
+                        <td id="wed14"></td>
+                        <td id="thu14"></td>
+                        <td id="fri14"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>3</th>
+                        <td id="mon15"></td>
+                        <td id="tue15"></td>
+                        <td id="wed15"></td>
+                        <td id="thu15"></td>
+                        <td id="fri15"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>4</th>
+                        <td id="mon16"></td>
+                        <td id="tue16"></td>
+                        <td id="wed16"></td>
+                        <td id="thu16"></td>
+                        <td id="fri16"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>5</th>
+                        <td id="mon17"></td>
+                        <td id="tue17"></td>
+                        <td id="wed17"></td>
+                        <td id="thu17"></td>
+                        <td id="fri17"></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>6</th>
+                        <td id="mon18"></td>
+                        <td id="tue18"></td>
+                        <td id="wed18"></td>
+                        <td id="thu18"></td>
+                        <td id="fri18"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="buttons">
+            <button type="button" class="delete" id="delete">delete</button>
+            <button type="button" class="done" id="done">done</button>
+            </div>
+        </div>
+            <!-- script는 맨아래에 있어야 안전함 -->
+            <script src="timetable.js"></script>
+        </div>
+    </body>
+
+</html>

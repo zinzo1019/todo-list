@@ -1,0 +1,31 @@
+.bigtable {
+    width: 500px;
+    height: 600px;
+    position: relative;
+    left: 50%;
+    top: 20px;
+    margin-left: -250px;
+}
+
+.showTimetable {
+     font-family: 'Yusei Magic', sans-serif;  
+    font-weight: bold;  
+    font-size: 20px;
+    position: absolute;
+    /* 글자를 추가해도 테이블 크기는 일정 */
+    table-layout: fixed;
+    /* 빈 셀도 표시가 되도록 */
+    empty-cells: show;
+    width: 500px;
+}
+
+#modify {
+    width: 35px;
+    height: 30px;
+    font-size: 15px;
+     margin-left: 450px;
+    position: absolute;
+    top: 5px;
+    /* 테이블이랑 버튼이랑 겹치기 가능 */
+    z-index: 1;
+}
