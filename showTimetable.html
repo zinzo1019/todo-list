@@ -1,132 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="timetable.css">
     <link rel="stylesheet" href="showTimetable.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- 폰트 추가 -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
 </head>
+
 <body>
-    <div class="bigtable">
-        <button type="button" id="modify" onclick="location.href='timetable.html'">+</button>
-    <table class="showTimetable color">
-        <caption>timetable</caption>
-        <thead class="border">
-            <tr>
-                <th width="30px" style="background-color: #9098B2;"></th>
-                <th>mon</th>
-                <th>tue</th>
-                <th>wed</th>
-                <th>thu</th>
-                <th>fri</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>9</th>
-                <td id="mon9"></td>
-                <td id="tue9"></td>
-                <td id="wed9"></td>
-                <td id="thu9"></td>
-                <td id="fri9"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>10</th>
-                <td id="mon10"></td>
-                <td id="tue10"></td>
-                <td id="wed10"></td>
-                <td id="thu10"></td>
-                <td id="fri10"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>11</th>
-                <td id="mon11"></td>
-                <td id="tue11"></td>
-                <td id="wed11"></td>
-                <td id="thu11"></td>
-                <td id="fri11"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>12</th>
-                <td id="mon12"></td>
-                <td id="tue12"></td>
-                <td id="wed12"></td>
-                <td id="thu12"></td>
-                <td id="fri12"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>1</th>
-                <td id="mon13"></td>
-                <td id="tue13"></td>
-                <td id="wed13"></td>
-                <td id="thu13"></td>
-                <td id="fri13"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>2</th>
-                <td id="mon14"></td>
-                <td id="tue14"></td>
-                <td id="wed14"></td>
-                <td id="thu14"></td>
-                <td id="fri14"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>3</th>
-                <td id="mon15"></td>
-                <td id="tue15"></td>
-                <td id="wed15"></td>
-                <td id="thu15"></td>
-                <td id="fri15"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>4</th>
-                <td id="mon16"></td>
-                <td id="tue16"></td>
-                <td id="wed16"></td>
-                <td id="thu16"></td>
-                <td id="fri16"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>5</th>
-                <td id="mon17"></td>
-                <td id="tue17"></td>
-                <td id="wed17"></td>
-                <td id="thu17"></td>
-                <td id="fri17"></td>
-            </tr>
-        </tbody>
-        <tbody>
-            <tr>
-                <th>6</th>
-                <td id="mon18"></td>
-                <td id="tue18"></td>
-                <td id="wed18"></td>
-                <td id="thu18"></td>
-                <td id="fri18"></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="biggestTable">
+        <table class="showTimetable color">
+            <caption>
+                timetable<button id="plusButton" class="modify font-size">+</button>
+            </caption>
+            <thead class="border">
+                <tr>
+                    <th width="25px" style="background-color:rgb(159, 159, 216);"></th>
+                    <th>mon</th>
+                    <th>tue</th>
+                    <th>wed</th>
+                    <th>thu</th>
+                    <th>fri</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>9</th>
+                    <td id="mon9"></td>
+                    <td id="tue9"></td>
+                    <td id="wed9"></td>
+                    <td id="thu9"></td>
+                    <td id="fri9"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>10</th>
+                    <td id="mon10"></td>
+                    <td id="tue10"></td>
+                    <td id="wed10"></td>
+                    <td id="thu10"></td>
+                    <td id="fri10"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>11</th>
+                    <td id="mon11"></td>
+                    <td id="tue11"></td>
+                    <td id="wed11"></td>
+                    <td id="thu11"></td>
+                    <td id="fri11"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>12</th>
+                    <td id="mon12"></td>
+                    <td id="tue12"></td>
+                    <td id="wed12"></td>
+                    <td id="thu12"></td>
+                    <td id="fri12"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td id="mon13"></td>
+                    <td id="tue13"></td>
+                    <td id="wed13"></td>
+                    <td id="thu13"></td>
+                    <td id="fri13"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>2</th>
+                    <td id="mon14"></td>
+                    <td id="tue14"></td>
+                    <td id="wed14"></td>
+                    <td id="thu14"></td>
+                    <td id="fri14"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>3</th>
+                    <td id="mon15"></td>
+                    <td id="tue15"></td>
+                    <td id="wed15"></td>
+                    <td id="thu15"></td>
+                    <td id="fri15"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>4</th>
+                    <td id="mon16"></td>
+                    <td id="tue16"></td>
+                    <td id="wed16"></td>
+                    <td id="thu16"></td>
+                    <td id="fri16"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>5</th>
+                    <td id="mon17"></td>
+                    <td id="tue17"></td>
+                    <td id="wed17"></td>
+                    <td id="thu17"></td>
+                    <td id="fri17"></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>6</th>
+                    <td id="mon18"></td>
+                    <td id="tue18"></td>
+                    <td id="wed18"></td>
+                    <td id="thu18"></td>
+                    <td id="fri18"></td>
+                </tr>
+            </tbody>
+                <div id="buttons">
+                    <button type="button" class="delete font-size" id="delete">delete</button>
+                    <button type="button" class="done font-size" id="done">done</button>
+                </div>
+        </table>
     </div>
+    </div>
+    <div id="divTag"></div>
 </body>
+<script src="showTimetable.js"></script>
 </html>

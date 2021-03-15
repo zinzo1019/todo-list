@@ -1,31 +1,144 @@
-.bigtable {
-    width: 500px;
-    height: 600px;
+/* class로 설정하면 우선순위가 밀리기 때문에 id로 설정 */
+.biggestTable {
     position: relative;
+    top: 10px;
     left: 50%;
-    top: 20px;
-    margin-left: -250px;
+    width: 400px;
+    height: 560px;
+    margin-left: -200px;
+    border: 9px solid rgb(115, 147, 252);
 }
-
 .showTimetable {
-     font-family: 'Yusei Magic', sans-serif;  
+  position: absolute;
+    width: 370px;
+    height: 470px;
+    top: 10px;
+    left: 50%;
+    margin-left: -185px;
+    background-color: whitesmoke;
+    font-family: 'Nanum Pen Script', cursive;
     font-weight: bold;  
     font-size: 20px;
-    position: absolute;
-    /* 글자를 추가해도 테이블 크기는 일정 */
     table-layout: fixed;
-    /* 빈 셀도 표시가 되도록 */
-    empty-cells: show;
-    width: 500px;
+}
+caption {
+    margin-left: 50px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: x-large;
+    padding-bottom: 10px;
+    /* 텍스트에 줄 긋기 */
+    text-decoration: underline solid black;
+}
+.font-size {
+    font-family: 'Nanum Pen Script', cursive;
+     color: white;
+    background-color: rgb(115, 147, 252);
+     font-weight: bold;
+}
+tr {
+    font-size: larger;
+}
+.modify {
+    float: right;
+    margin-top: 5px;
+    margin-right: 16px;
+}
+.color {
+    background-color: whitesmoke;
+}
+thead {
+    background: #eee;
+    font-family: 'Nanum Pen Script', cursive;
+}
+th, td {
+    text-align: center;
+    border:1px solid black;
+    /* 한 칸의 높이 설정 */                                                                                                                           
+    padding: 9.3px;
+    /* 셀 테두리 둥글게 */
+    border-radius: 10px;
+    table-layout: fixed;
+    height: 16.5px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+th {
+    font-size: 0.8em;
+    background-color: rgb(212, 212, 247);
+}
+td {
+      /* 쓸데없는 여백 제거 */
+    padding: 0px;
+    font-size: small;
+}
+#createTimetable {
+    position: absolute;
+    top: 20px;
+    left: 870px;
+    height: 200px;
+    width: 330px;
+    border: 9px solid rgb(115, 147, 252);
+}
+.font {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: large;
 }
 
-#modify {
+ul li {
+    margin-bottom: 8px;
+    font-size: larger;
+}
+label {
+    font-family: 'Nanum Pen Script', cursive;
+    width: 90px;
+    float: left;
+}
+p {
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: bolder;
+    font-size: x-large;
+    margin-top: 2px;
+    text-align: center;
+    padding: 0px;
+    text-decoration: underline solid black;
+}
+#enrollment {
     width: 35px;
     height: 30px;
-    font-size: 15px;
-     margin-left: 450px;
-    position: absolute;
-    top: 5px;
-    /* 테이블이랑 버튼이랑 겹치기 가능 */
-    z-index: 1;
+    font-size: large;
+    margin-left: 115px;
+    color: white;
+    background-color: rgb(115, 147, 252);
+}
+.delete {
+    position: relative;
+    height: 25px;
+    width: 50px;
+    left: 272px;
+    top: 530px;
+    font-size: large;
+}
+.done {
+    position: relative;
+    height: 25px;
+    width: 50px;
+    left: 272px;
+    top: 530px;
+    font-size: large;
+}
+.roundButton {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: rgb(255, 105, 105);
+    font-size: 100%;
+    margin-left: auto; margin-right: auto;
+    /* line-height와 font-size를 함께 설정하면 글씨가 아래로 밀리지 않는다. */
+    /* font-size: 3px;
+    line-height: 0px; */
+    float: left;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    /* margin을 0으로 설정하지 않으면 버튼 옆에 빈 공간이 생긴다. */
+    margin: 3px;
 }
